@@ -1,14 +1,14 @@
-# Este repo tem como intuito ensinar a trabalhar com pdfs.
+# Este repositório tem como intuito ensinar a trabalhar com pdfs.
 
 ### Sobre:
 
-A biblioteca utilizada foi o [`PDF make`]("https://pdfmake.github.io/docs/0.1/), pois até o momento foi a mais simples e legal de utilizar que eu encontrei.
+A biblioteca utilizada foi o [PDF make]("https://pdfmake.github.io/docs/0.1), pois até o momento foi a mais simples e legal de utilizar que eu encontrei.
 
 Mostrei dois exemplos com sua utilização, uma para que o usuário possa fazer o download do pdf e outra para que o usuário possa enviar o documento por email.
 
 ### Importante:
 
-**Para o envio do pdf por email, você precisará de uma conta no [twillio]("https://www.twilio.com/").**
+**Para o envio do pdf por email, você precisará de uma conta no [Send Grid]("https://sendgrid.com/solutions/email-api").**
 
 ### Como rodar:
 
