@@ -10,17 +10,6 @@ const sendgridEmail = process.env.SENDGRID_EMAIL; // Pego do seu arquivo .env, i
 const printer = require("../../../configs/pdfPrinter");
 
 module.exports = async (req, res) => {
-  // Você poderia pegar esse email pelo body da requisição, porém, para deixar mais fácil de testar com um simples get no navegador, vamos pegar assim, hardcode.
-  // Informe seu email aqui
-  // const yourEmail = "wpdads10@gmail.com";
-
-  // await sgMail.send({
-  //   subject: "PDF envido por WemersonPD",
-  //   to: yourEmail,
-  //   from: sendgridEmail,
-  //   html: `<h1>Email de teste enviado por WemersonPD<h1>`,
-  // });
-
   const pdfDoc = printer.createPdfKitDocument({
     defaultStyle: { font: "Roboto" },
     content: [
