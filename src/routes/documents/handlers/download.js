@@ -1,14 +1,4 @@
-const PdfPrinter = require("pdfmake");
-
-const fonts = {
-  Roboto: {
-    normal: "fonts/Roboto-Regular.ttf",
-    bold: "fonts/Roboto-Medium.ttf",
-    italics: "fonts/Roboto-Italic.ttf",
-    bolditalics: "fonts/Roboto-MediumItalic.ttf",
-  },
-};
-const printer = new PdfPrinter(fonts);
+const printer = require("../../../configs/pdfPrinter");
 
 module.exports = (req, res) => {
   const pdfDoc = printer.createPdfKitDocument({
@@ -19,12 +9,15 @@ module.exports = (req, res) => {
     ],
   });
 
+  // Chuncks são pedaços do seu arquivo
   const chuncks = [];
 
   pdfDoc.on("data", (chunck) => {
+    // Montando o arquivo juntando os pedaços
     chuncks.push(chunck);
   });
 
+  // Finalizando a criação do arquivo
   pdfDoc.end();
 
   return pdfDoc.on("end", () => {

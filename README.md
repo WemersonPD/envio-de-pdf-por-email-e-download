@@ -13,7 +13,7 @@ Mostrei dois exemplos com sua utilização, uma para que o usuário possa fazer 
 ### Como rodar:
 
 - Instale os pacotes `npm install`.
-- Crie um arquivo `.env` com as credencias que extão no `.env.example`.
+- Crie um arquivo `.env` com as credencias que extão no `.env.example`, informe seus dados do sendgrid corretamente para que possa ser envio o pdf por email.
 - Rode o comando `npm run dev`, no qual irá subir seu servidor na porta `3000`.
 
 ### Rotas:
