@@ -56,6 +56,7 @@ module.exports = async (req, res) => {
           // São arquivos para serem enviado por email
           {
             filename: "pdf-de-teste-wemersonpd", // Nome do arquivo
+            // Concateno cade pedaço do pdf, e transformo em base64
             content: Buffer.concat(chuncks).toString("base64"), // Arquivo em base 64, o SEND GRID pede que seja assim
             type: "application/pdf", // Informando o tipo do arquivo
             disposition: "attachment", // Informando que é um anexo
